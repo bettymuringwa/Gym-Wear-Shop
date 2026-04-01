@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIMBA Active — Strength In Power</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+ <script src="script.js"></script>
+ 
+</head>
+<body>
+
+ 
+  <div class="toast" id="toast"></div>
+ 
+  <!-- ════ NAV ════ -->
+  <nav id="mainNav">
+    <a href="#hero" class="nav-logo">SIMBA<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#categories">Collections</a></li>
+      <li><a href="#products">Shop</a></li>
+      <li><a href="#featured">Featured</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="cart-btn" onclick="openCart()">
+      <i data-lucide="shopping-bag" style="width:15px;height:15px;"></i>
+      Cart
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </nav>
+ 
+  <!-- ════ HERO ════ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="hero-slash"></div>
+    <div class="hero-left">
+      <div class="hero-kicker">
+        <span class="kicker-line"></span>
+        <span class="kicker-text">New Collection — 2025</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="ht-main">STR<span class="accent">EN</span></span>
+        <span class="ht-main">GTH</span>
+        <span class="ht-sub">In Power</span>
+      </h1>
+      <p class="hero-body">Premium gym wear engineered for performance.<br>Earth tones. Zero compromise. Pure SIMBA.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn-dark"><i data-lucide="arrow-right" style="width:14px;height:14px;"></i> Shop Now</a>
+        <a href="#about" class="btn-ghost">Our Story</a>
+      </div>
+      <div class="hero-badges">
+        <div class="hbadge"><i data-lucide="shield-check" style="width:13px;height:13px;"></i> Premium Fabric</div>
+        <div class="hbadge"><i data-lucide="zap" style="width:13px;height:13px;"></i> Performance Fit</div>
+        <div class="hbadge"><i data-lucide="leaf" style="width:13px;height:13px;"></i> Earth Tones</div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-watermark">SIMBA</div>
+      <div class="hero-card">
+        <div class="hc-ring hc-ring-1"></div>
+        <div class="hc-ring hc-ring-2"></div>
+        <div class="hero-card-inner">
+          <div class="hc-badge"><i data-lucide="star" style="width:9px;height:9px;"></i> Pride Collection</div>
+          <span class="hc-lion">🦁</span>
+          <span class="hc-from">Starting From</span>
+          <span class="hc-price">P249</span>
+          <a href="#products" class="hc-link">Explore <i data-lucide="chevron-right" style="width:12px;height:12px;"></i></a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-num">500<sup>+</sup></span><span class="hstat-lbl">Sold</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-num">4</span><span class="hstat-lbl">Collections</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-num">98<sup>%</sup></span><span class="hstat-lbl">Satisfied</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll"><i data-lucide="mouse" style="width:13px;height:13px;"></i> Scroll</div>
+  </section>
+ 
+  <!-- ════ CATEGORIES ════ -->
+  <section id="categories" class="sec" style="background:var(--cream-dark);">
+    <div class="label-tag reveal">Browse</div>
+    <h2 class="sec-title reveal">Shop by <em>Category</em></h2>
+    <div class="cat-grid">
+      <div class="cat-card reveal" onclick="filterGo('tops')">
+        <div class="cat-fill c-olive"></div><div class="cat-shadow"></div>
+        <span class="cat-chip"><i data-lucide="arrow-right" style="width:10px;height:10px;"></i> Explore</span>
+        <div class="cat-body">
+          <div class="cat-icon"><i data-lucide="shirt" style="width:26px;height:26px;"></i></div>
+          <span class="cat-name">Training Tops</span><span class="cat-count">14 styles</span>
+        </div>
+      </div>
+      <div class="cat-card reveal d1" onclick="filterGo('bottoms')">
+        <div class="cat-fill c-nude"></div><div class="cat-shadow"></div>
+        <span class="cat-chip"><i data-lucide="arrow-right" style="width:10px;height:10px;"></i> Explore</span>
+        <div class="cat-body">
+          <div class="cat-icon"><i data-lucide="layers" style="width:26px;height:26px;"></i></div>
+          <span class="cat-name">Shorts & Tights</span><span class="cat-count">18 styles</span>
+        </div>
+      </div>
+      <div class="cat-card reveal d2" onclick="filterGo('sets')">
+        <div class="cat-fill c-dark"></div><div class="cat-shadow"></div>
+        <span class="cat-chip"><i data-lucide="arrow-right" style="width:10px;height:10px;"></i> Explore</span>
+        <div class="cat-body">
+          <div class="cat-icon"><i data-lucide="package" style="width:26px;height:26px;"></i></div>
+          <span class="cat-name">Full Sets</span><span class="cat-count">8 sets</span>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ════ PRODUCTS ════ -->
+  <section id="products" class="sec" style="background:var(--white);">
+    <div class="label-tag reveal">Our Range</div>
+    <h2 class="sec-title reveal">All <em>Products</em></h2>
+    <div class="filter-row reveal">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="tops">Tops</button>
+      <button class="filter-tab" data-filter="bottoms">Bottoms</button>
+      <button class="filter-tab" data-filter="sets">Sets</button>
+      <button class="filter-tab" data-filter="accessories">Accessories</button>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+ 
+  <!-- ════ FEATURED ════ -->
+  <section id="featured" style="padding:0;">
+    <div class="feat-wrap">
+      <div class="feat-left">
+        <div class="label-tag reveal">Limited Drop</div>
+        <h2 class="sec-title reveal">The <em>Pride</em><br>Collection</h2>
+        <p class="reveal">Engineered for the warrior in you. Compression-flex fabric meets refined earth-tone design. Built for high-performance training.</p>
+        <a href="#products" class="btn-cream reveal"><i data-lucide="shopping-bag" style="width:14px;height:14px;"></i> Shop Collection</a>
+      </div>
+      <div class="feat-right">
+        <div class="feat-rings"><div class="fr fr-1"></div><div class="fr fr-2"></div><div class="fr fr-3"></div></div>
+        <div class="feat-center">
+          <i data-lucide="award" style="width:30px;height:30px;display:block;margin:0 auto 0.9rem;"></i>
+          <div class="feat-price">P299</div>
+          <div class="feat-label">Starting From</div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ════ ABOUT ════ -->
+  <section id="about" class="sec" style="background:var(--cream-dark);">
+    <div class="about-grid">
+      <div class="about-body">
+        <div class="label-tag reveal">Our Story</div>
+        <h2 class="sec-title reveal">Built for <em>Warriors</em></h2>
+        <p class="reveal"><strong>SIMBA was born in the gym.</strong> Not in a boardroom — but under the iron, in the sweat, in those moments when you decide to go one more rep.</p>
+        <p class="reveal">We chose earthy tones — olive, nude, brown — because real strength doesn't need to shout. It speaks for itself.</p>
+        <div class="pillars reveal">
+          <div class="pillar"><div class="pillar-ico"><i data-lucide="zap" style="width:16px;height:16px;"></i></div><h4>Compression Flex</h4><p>4-way stretch that moves with you.</p></div>
+          <div class="pillar"><div class="pillar-ico"><i data-lucide="droplets" style="width:16px;height:16px;"></i></div><h4>Moisture Wicking</h4><p>Keeps you dry through every set.</p></div>
+          <div class="pillar"><div class="pillar-ico"><i data-lucide="shield-check" style="width:16px;height:16px;"></i></div><h4>Anti-Odor</h4><p>Stays fresh session after session.</p></div>
+          <div class="pillar"><div class="pillar-ico"><i data-lucide="layers" style="width:16px;height:16px;"></i></div><h4>Durable Build</h4><p>Engineered for real heavy training.</p></div>
+        </div>
+      </div>
+      <div class="reveal d2">
+        <div class="stats-grid">
+          <div class="stat-box"><div class="stat-num">500+</div><div class="stat-lbl">Items Sold</div></div>
+          <div class="stat-box"><div class="stat-num">98%</div><div class="stat-lbl">Satisfied</div></div>
+          <div class="stat-box"><div class="stat-num">4</div><div class="stat-lbl">Collections</div></div>
+          <div class="stat-box" style="background:var(--olive-dark);"><div class="stat-num" style="color:var(--cream);">1</div><div class="stat-lbl" style="color:rgba(255,255,255,0.4);">Mission</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ════ CONTACT ════ -->
+  <section id="contact" class="sec" style="background:var(--white);">
+    <div class="label-tag reveal">Get In Touch</div>
+    <h2 class="sec-title reveal">Contact <em>Us</em></h2>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-item"><div class="ci-ico"><i data-lucide="mail" style="width:15px;height:15px;"></i></div><div><h4>Email</h4><p>hello@simbaactive.com</p></div></div>
+        <div class="contact-item"><div class="ci-ico"><i data-lucide="message-circle" style="width:15px;height:15px;"></i></div><div><h4>WhatsApp</h4><p>+267 7X XXX XXXX</p></div></div>
+        <div class="contact-item"><div class="ci-ico"><i data-lucide="clock" style="width:15px;height:15px;"></i></div><div><h4>Hours</h4><p>Mon–Fri: 8am–6pm<br>Sat: 9am–2pm</p></div></div>
+        <div class="contact-item"><div class="ci-ico"><i data-lucide="map-pin" style="width:15px;height:15px;"></i></div><div><h4>Location</h4><p>Gaborone, Botswana</p></div></div>
+      </div>
+      <div class="reveal d1">
+        <div class="form-row">
+          <div class="form-grp"><label>First Name</label><input type="text" placeholder="Your first name"/></div>
+          <div class="form-grp"><label>Last Name</label><input type="text" placeholder="Your last name"/></div>
+        </div>
+        <div class="form-grp"><label>Email</label><input type="email" placeholder="your@email.com"/></div>
+        <div class="form-grp"><label>Message</label><textarea placeholder="Tell us what you need..."></textarea></div>
+        <button class="btn-submit" onclick="showToast('Message sent! We\'ll be in touch.')">
+          <i data-lucide="send" style="width:14px;height:14px;"></i> Send Message
+        </button>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ════ FOOTER ════ -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo">SIMBA<span>.</span></div>
+        <p class="f-desc">Strength In Power. Premium gym wear for those who refuse to quit.</p>
+        <div class="f-socials">
+          <div class="f-soc"><i data-lucide="instagram" style="width:14px;height:14px;"></i></div>
+          <div class="f-soc"><i data-lucide="facebook" style="width:14px;height:14px;"></i></div>
+          <div class="f-soc"><i data-lucide="video" style="width:14px;height:14px;"></i></div>
+          <div class="f-soc"><i data-lucide="message-circle" style="width:14px;height:14px;"></i></div>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a href="#categories">Training Tops</a></li><li><a href="#categories">Shorts & Tights</a></li><li><a href="#categories">Full Sets</a></li><li><a href="#products">New Arrivals</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="#about">Our Story</a></li><li><a href="#contact">Contact</a></li><li><a href="#">Size Guide</a></li><li><a href="#">Returns</a></li></ul></div>
+      <div class="footer-col"><h4>Support</h4><ul><li><a href="#">FAQs</a></li><li><a href="#">Shipping</a></li><li><a href="#">Track Order</a></li><li><a href="#">Wholesale</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 SIMBA Active. All rights reserved.</span>
+      <span>Strength In Power · Made in Africa 🌍</span>
+    </div>
+  </footer>
+ 
+  <!-- ════ CART ════ -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-head">
+      <div class="cart-head-title">Your <span>Cart</span></div>
+      <button class="cart-x" onclick="closeCart()"><i data-lucide="x" style="width:17px;height:17px;"></i></button>
+    </div>
+    <div class="cart-scroll">
+      <div class="cart-empty-state" id="cartEmpty">
+        <div class="ces-icon"><i data-lucide="shopping-bag" style="width:34px;height:34px;"></i></div>
+        <div class="ces-title">Your cart is empty</div>
+        <div class="ces-sub">Time to gear up, warrior.</div>
+      </div>
+      <div id="cartItems"></div>
+    </div>
+    <div class="cart-foot" id="cartFoot" style="display:none;">
+      <div class="cf-row"><span>Subtotal</span><span class="v" id="cartSub">P0</span></div>
+      <div class="cf-row"><span>Delivery</span><span class="v">Calculated at checkout</span></div>
+      <div class="cf-total"><span>Total</span><span class="cf-amount" id="cartTot">P0</span></div>
+      <button class="chk-btn" onclick="showToast('Checkout coming soon!')">
+        <i data-lucide="lock" style="width:13px;height:13px;"></i> Proceed to Checkout
+      </button>
+      <button class="cont-btn" onclick="closeCart()">Continue Shopping</button>
+    </div>
+  </aside>
+ 
+  <!--
+    ════════════════════════════════════════
+    JavaScript lives in js/app.js
+    All functions (cart, products, toast,
+    reveal, nav, scroll) are defined there.
+    This keeps index.html clean HTML only.
+    ════════════════════════════════════════
+  -->
+  <script src="js/app.js"></script>
+ 
+</body>
+</html>
